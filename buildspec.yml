@@ -27,7 +27,7 @@ phases:
           --name "ReviewName" \
           --type "RepositoryAnalysis" \
          # --source-reference "master" \  # Aquí puedes poner una rama o un commit específico
-         # --region us-east-2  # Región donde se encuentra tu repositorio y CodeGuru
+         # --region us-east-2  # Región donde se encuentra tu repositorio y CodeGuru 
   post_build:
     commands:
       - echo "we are in the post build phase"
