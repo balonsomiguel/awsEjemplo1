@@ -6,7 +6,7 @@ phases:
       nodejs: 10
     commands:
       - echo "installing something"
-      - pip install awscli
+      - pip install --upgrade awscli
   pre_build:
     commands:
       - echo "we are in the pre build phase"
@@ -25,7 +25,7 @@ phases:
         aws codeguru-reviewer create-code-review \
           --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:77be1123-3b4d-4161-9e89-983e05fdd06b:code-review:RepositoryAnalysis-balonsomiguel_awsEjemplo1-master-66f49c6e-3f3b-4174-a445-c89397e62007 \
           --name "ReviewName" \
-          --type RepositoryAnalysis \
+          --type "RepositoryAnalysis" \
          # --source-reference "master" \  # Aquí puedes poner una rama o un commit específico
          # --region us-east-2  # Región donde se encuentra tu repositorio y CodeGuru
   post_build:
