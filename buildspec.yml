@@ -19,7 +19,7 @@ phases:
       #- grep -Fq "Cross-Site Scripting (XSS)" index.html
       # Analizar el código con CodeGuru Reviewer
       - echo Running CodeGuru Reviewer...
-      - aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:77be1123-3b4d-4161-9e89-983e05fdd06b:code-review:RepositoryAnalysis-balonsomiguel_awsEjemplo1-master-66f49c6e-3f3b-4174-a445-c89397e62007 --type PullRequest --target-repository-name awsEjemplo1 --name "ReviewName"
+      - aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:77be1123-3b4d-4161-9e89-983e05fdd06b:code-review:RepositoryAnalysis-balonsomiguel_awsEjemplo1-master-66f49c6e-3f3b-4174-a445-c89397e62007 --type PullRequest --target-repository-name "awsEjemplo1" --name "ReviewName"
   post_build:
     commands:
       - echo "we are in the post build phase"
