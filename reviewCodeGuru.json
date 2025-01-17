@@ -1,0 +1,8 @@
+{
+  "RepositoryAnalysis": {
+       "RepositoryHead": {
+           "BranchName": "master"
+       }
+   },
+  "AnalysisTypes": ["Security", "CodeQuality"]
+}
