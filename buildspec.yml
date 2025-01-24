@@ -21,7 +21,7 @@ phases:
       # Analizar el código con CodeGuru Reviewer
       - echo Running CodeGuru Reviewer...
       - aws --version
-      - aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:602e0047-86af-4b68-99ca-5a95cd89e9cc --name "MyCodeGuruReview" --type=file://reviewCodeGuru.json
+      - aws codeguru-reviewer create-code-review --repository-association-arn arn:aws:codeguru-reviewer:us-east-2:941377112071:association:602e0047-86af-4b68-99ca-5a95cd89e9cc --name "MyCodeGuruReview2" --type=file://reviewCodeGuru.json
   post_build:
     commands:
       - echo "we are in the post build phase"
